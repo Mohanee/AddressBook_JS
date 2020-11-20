@@ -102,3 +102,7 @@ console.log("Kolkata - "+AddressBookArray.filter(contact => contact.city == "Kol
 console.log("\nContacts by state :")
 console.log("WB - "+AddressBookArray.filter(contact => contact.state == "WB").length);
 console.log("CG - "+AddressBookArray.filter(contact => contact.state == "CG").length);
+
+
+//UC11 Sort Alphabetically
+AddressBookArray.sort((c1,c2) => c1.firstName == c2.firstName); 
