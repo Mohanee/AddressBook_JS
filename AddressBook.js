@@ -12,8 +12,9 @@ function Contact(fName,lName,address,city,state,zip,phone,email){
     this.email = email;
 }
 
-let contact = new Contact('Mohanee', 'Dammu','Avenue-A','Bhilai','CG','490006','9674879893','monee99@gmail.com');
-console.log(contact); 
+let contact1 = new Contact('Mohanee', 'Dammu','Avenue-A','Bhilai','CG','490006','9674879893','monee99@gmail.com');
+let contact2 = new Contact('Shreya', 'Dammu','Topsia Hall','Ranchi','JK','498766','8765423487','somu002@gmail.com');
+//console.log(contact1); 
 
 //UC2  Validate Entries
 let validate = 
@@ -33,6 +34,21 @@ let validate =
                     throw key + ' is not valid';
         }
     };
-validate.validateAll(contact); 
+validate.validateAll(contact1); 
 
-//UC3 
+//UC3 Add AddressBook Array to store Multiple Con tacts
+let AddressBookArray = [contact1];
+AddressBookArray.push(contact2);
+console.log(AddressBookArray); 
+
+//UC4 Find Contact in AddressBookArray with firstName
+let firstNameToFind= 'Mohanee';
+let contact = AddressBookArray.find(person => person.firstName==firstNameToFind);
+if(contact!=undefined)
+{
+    console.log("Following are the details of Contact with First Name : "+firstNameToFind);
+    console.log(contact);
+}
+else{
+    console.log("No Contact with First Name "+firstNameToFind);
+}
