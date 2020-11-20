@@ -72,7 +72,13 @@ let index= AddressBookArray.findIndex(c=> c.firstName== nameToDelete);
 AddressBookArray.splice(index,1);
 console.log(AddressBookArray);
 
-//UC6 : Number Of Contacts in AddressBookArray
+//UC6  Number Of Contacts in AddressBookArray
 let count = 0;
 let num = AddressBookArray.reduce((count) => count+1,0);
 console.log('Number of Contacts : ',num); 
+
+//UC7  Check for Duplicates
+function checkDuplicate(contact){
+    return AddressBookArray.filter(c => c.email==contact.email).length != 0;
+}
+console.log(checkDuplicate(contact1)); 
