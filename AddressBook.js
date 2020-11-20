@@ -107,3 +107,18 @@ console.log("CG - "+AddressBookArray.filter(contact => contact.state == "CG").le
 //UC11 Sort Alphabetically
 AddressBookArray.sort((c1,c2) => c1.firstName == c2.firstName); 
 console.log(AddressBookArray);
+
+//UC12.1 Sort By City
+ console.log("\nSorted by city");
+ let sortedByCity = AddressBookArray.sort((c1,c2)=> c1.city.localeCompare(c2.city));
+ console.log(sortedByCity);
+
+ //UC12.2 Sort by state
+ console.log("\nSorted by stae");
+ let sortedByState = AddressBookArray.slice(0).sort((c1,c2)=> c1.state.localeCompare(c2.state));
+ console.log(sortedByState);
+
+ //UC12.3 Sort by zip
+ console.log("\nSorted by zip");
+ let sortedByZip = AddressBookArray.slice(0).sort((c1,c2)=> c1.zip.localeCompare(c2.zip));
+ console.log(sortedByZip);
