@@ -93,3 +93,12 @@ console.log(person);
 let cityToView = 'Bhilai';
 let contacts = AddressBookArray.filter(c => c.city==cityToView);
 console.log(contacts); 
+
+//UC10 Count By City & State
+console.log("Contacts by city :")
+console.log("Bhilai - "+AddressBookArray.filter(contact => contact.city == "Bhilai").length);
+console.log("Kolkata - "+AddressBookArray.filter(contact => contact.city == "Kolkata").length);
+
+console.log("\nContacts by state :")
+console.log("WB - "+AddressBookArray.filter(contact => contact.state == "WB").length);
+console.log("CG - "+AddressBookArray.filter(contact => contact.state == "CG").length);
