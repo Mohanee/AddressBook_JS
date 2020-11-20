@@ -82,3 +82,9 @@ function checkDuplicate(contact){
     return AddressBookArray.filter(c => c.email==contact.email).length != 0;
 }
 console.log(checkDuplicate(contact1)); 
+
+//UC8 Search By City
+let city = 'Bhilai';
+let nameToSearch = 'Mohanee';
+let person = AddressBookArray.filter(c => c.city==city).find(c => c.firstName == nameToSearch);
+console.log(person); 
