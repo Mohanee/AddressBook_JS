@@ -106,3 +106,4 @@ console.log("CG - "+AddressBookArray.filter(contact => contact.state == "CG").le
 
 //UC11 Sort Alphabetically
 AddressBookArray.sort((c1,c2) => c1.firstName == c2.firstName); 
+console.log(AddressBookArray);
