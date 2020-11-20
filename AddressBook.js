@@ -88,3 +88,8 @@ let city = 'Bhilai';
 let nameToSearch = 'Mohanee';
 let person = AddressBookArray.filter(c => c.city==city).find(c => c.firstName == nameToSearch);
 console.log(person); 
+
+//UC9 View By City
+let cityToView = 'Bhilai';
+let contacts = AddressBookArray.filter(c => c.city==cityToView);
+console.log(contacts); 
